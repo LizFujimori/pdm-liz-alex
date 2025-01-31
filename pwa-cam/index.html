@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PWA - Camera</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/images/icon-256_ios.png">
-    <link rel="icon" href="/images/camera_256.png" sizes="256x256">
-    <meta name="theme-color" content="white">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diário de Treinos</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/images/icon-256_ios.png" />
+    <link rel="icon" href="/images/camera_256.png" sizes="256x256" />
+    <meta name="theme-color" content="white" />
+    <script type="module" src="js/db.js"></script>
+  </head>
+  <body>
     <main id="camera">
-        <canvas id="camera--sensor"></canvas>
-        <video id="camera--view" autoplay playsinline></video>
-        <img src="//:0" alt="" id="camera--output">
-        <button id="camera--trigger">tirar foto</button>
+      <canvas id="camera--sensor"></canvas>
+      <video id="camera--view" autoplay playsinline></video>
+      <img src="//:0" alt="" id="camera--output" />
+      <button id="camera--trigger">tirar foto</button>
+      <div>
+        <h1>Diário de Treinos</h1>
+
+        <div>
+          <label for="treino">Treino</label>
+          <input type="text" name="treino" id="treino" />
+        </div>
+        <div>
+          <label for="carga">Carga</label>
+          <input type="number" name="carga" id="carga" />
+        </div>
+
+        <div>
+          <button id="btnSalvar">Salvar</button>
+          <button id="btnListar">Listar</button>
+        </div>
+        <div>
+          <output></output>
+        </div>
+      </div>
     </main>
-    <script src="/js/main.js" type="module" ></script>
-</body>
+    <script src="/js/main.js" type="module"></script>
+  </body>
 </html>

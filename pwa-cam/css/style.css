@@ -1,44 +1,89 @@
-html, body {
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-#camera, #camera--view, #camera--sensor, #camera--output {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-#camera--view, #camera--sensor, #camera--output {
-    transform: scaleX(-1);
-    filter: FlipH;
-}
-
-#camera--trigger {
-    width: 200px;
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    border-radius: 30px;
-    border: none;
-    padding: 15px 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  main {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
     text-align: center;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-    position: fixed;
-    bottom: 30px;
-    left: calc(50% - 100px);
-}
-
-.taken {
-    height: 100px !important;
-    width: 100px !important;
-    transition: all 0.5s ease-in;
-    border: solid 3px white;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-    top: 20px;
-    right: 20px;
-    z-index: 2;
-}
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 48%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  #camera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #camera--sensor, #camera--view {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #camera--trigger {
+    background: #28a745;
+    margin-bottom: 15px;
+  }
+  
+  #camera--trigger:hover {
+    background: #218838;
+  }
+  
+  output {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+  }
+  
